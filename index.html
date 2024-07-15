@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPA</title>
-    <link rel="stylesheet" href="mains.css">
+    <link rel="stylesheet" href="main.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=072ef320-b6f8-4ba7-863e-dc9e7f6b7105&lang=ru_RU" type="text/javascript"></script>
 
 
@@ -45,7 +45,7 @@
                     </div>
                     <div class="menu_row">
                         <div class="menu_row--right">
-                            <img src="./img/Finance.svg" alt="Finance">
+                            <img src="./img/Finance.svg" alt="Balance">
                             <a href="#">Balance</a>
                         </div>
                         <span class="cash">$ 1,430</span>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="menu_row">
                         <div class="menu_row--right">
-                            <img src="./img/People.svg" alt="People">
+                            <img src="./img/People.svg" alt="Friends">
                             <a href="#">Friends</a>
                         </div>
                     </div>
@@ -67,14 +67,14 @@
                 <div class="navigation_bottom">
                     <div class="bottom_row">
                         <div class="menu_row--right">
-                            <img src="./img/Calendar.svg" alt="Scheme">
+                            <img src="./img/Calendar.svg" alt="Events">
                             <a href="#">Events</a>
                         </div>
                         <span class="bg bg_green">45</span>
                     </div>
                     <div class="bottom_row">
                         <div class="menu_row--right">
-                            <img src="./img/Settings.svg" alt="People">
+                            <img src="./img/Settings.svg" alt="Settings">
                             <a href="#">Account settings</a>
                         </div>
     
@@ -103,7 +103,7 @@
         <div class="container">
             <div class="header__top">
                 <div class="header__top--left">
-                    <a href="#">
+                    <a href="./">
                         <img src="./img/arrow-right.svg" alt="Arrow-right">
                     </a>
                     <p>User pages - <span>Profile</span></p>
@@ -130,15 +130,15 @@
         <div class="container">
             <div class="nav__wrapper">
                 <div class="nav__wrapper--nav">
-                    <a onclick="route()" class="active nav__btn nav__btn-activity" href="./">
+                    <a class="active nav__btn nav__btn-activity" href="activity">
                         <img src="./img/Menu.svg" alt="Activity">
                         Activity
                     </a>
-                    <a onclick="route()" class="nav__btn" href="./map"> 
+                    <a class="nav__btn" href="map"> 
                         <img src="./img/Location.svg" alt="Map">
                         Map
                     </a>
-                    <a onclick="route()" class="nav__btn" href="./timer">
+                    <a  class="nav__btn" href="timer">
                         <img src="./img/Time.svg" alt="Time">
                         Time
                     </a>
@@ -146,22 +146,22 @@
     
                 <div class="nav__wrapper--menu">
                     <a  href="#">
-                        <img src="./img/Docs.svg" alt="Activity">
+                        <img src="./img/Docs.svg" alt="Notes">
                         Notes
                     </a>
                     <a href="#"> 
-                        <img src="./img/People.svg" alt="Map">
+                        <img src="./img/People.svg" alt="Friends">
                         Friends
                     </a>
                     <a href="#">
-                        <img src="./img/Jpg.svg" alt="Time">
+                        <img src="./img/Jpg.svg" alt="Photos">
                         Photos
                     </a>
                     <a class="link--setting" href="#">
-                        <img class="icon_setting" src="./img/Settings.svg" alt="Time">
+                        <img class="icon_setting" src="./img/Settings.svg" alt="Setting">
                     </a>
                     <a class="link--arrow" href="#">
-                        <img class="icon_arrow" src="./img/Small-Arrow.svg" alt="Time">
+                        <img class="icon_arrow" src="./img/Small-Arrow.svg" alt="Arrow">
                     </a>
                 </div>
 
@@ -177,11 +177,7 @@
 
     <main id="main-page" class="main"></main>
 
-
-    <script src="./js/main.js"></script>
-    <script src="./js/timer.js"></script>
-    <script type="text/javascript" src="./js/newMap.js"></script>
-
+    <script src="./main.js"></script>
 </body>
 </html>
 
