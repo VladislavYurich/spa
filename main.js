@@ -81,7 +81,7 @@ const openUserTime = Date.now()
 
 
 function searchTimer() {
-    return document.querySelector('.timer')
+    return document.querySelector('#timer')
 }
 
 
