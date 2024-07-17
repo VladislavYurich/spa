@@ -1,3 +1,5 @@
+
+
 const bntShow = document.querySelector(".profile");
 const profile = document.querySelector(".content_dop--wrapper");
 const body = document.querySelector('body')
@@ -57,7 +59,22 @@ const updateState = async (params) => {
     }
 }
 
-updateState('activity')
+const url = window.location.pathname
+console.log(url)
+if (url == '/spa-webbee/') {
+    updateState('activity')
+} else if (url == '/spa-webbee/map') {
+    updateState('map')
+} else if (url == '/spa-webbee/timer') {
+    updateState('timer')
+} else {
+    const alertShow = alert('Такой страницы не существует. Вернуть на главную?')
+    if (alertShow) {
+        updateState('activity')
+    }
+}
+
+
 
 
 nav.forEach((btn)=>{
