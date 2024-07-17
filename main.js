@@ -57,6 +57,15 @@ const updateState = async (params) => {
     }
 }
 
+const navActive = (params) => {
+    console.log(document.querySelector(`.${params}`))
+    const currentBtn = document.querySelector('a[href=`${params}`]')
+    console.log(currentBtn)
+    navBtns.forEach(btn => btn.classList.remove('active'))
+    currentBtn.forEach(btn => btn.classList.add('active'))
+}
+
+
 const url = window.location.pathname
 switch (url) {
     case '/spa-webbee/':
@@ -77,15 +86,6 @@ switch (url) {
         break;
     default: alertFunc()
         break;
-}
-
-const navActive = (params) => {
-    console.log(document.querySelector(`.${params}`))
-    const currentBtn = document.querySelector('a[href=`${params}`]')
-    console.log(currentBtn)
-    navBtns.forEach(btn => btn.classList.remove('active'))
-    currentBtn.forEach(btn => btn.classList.add('active'))
-
 }
 
 
