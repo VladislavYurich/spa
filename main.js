@@ -50,6 +50,7 @@ const updateState = async (params) => {
 
     }
     const content = await fetch(paths[params].html).then((data)=> data.text())
+    console.log(content)
     contentBox.innerHTML = content
     if (paths[params].scripts) {
         paths[params].scripts()
@@ -63,6 +64,7 @@ nav.forEach((btn)=>{
     btn.addEventListener('click', (e)=>{
         e.preventDefault()
         const state = {page: e.target.getAttribute('href')}
+        console.log(state.page)
         history.pushState(state, null, state.page)
         updateState(state.page)
     })
