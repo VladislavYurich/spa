@@ -50,7 +50,6 @@ const updateState = async (params) => {
 
     }
     const content = await fetch(paths[params].html).then((data)=> data.text())
-    console.log(content)
     contentBox.innerHTML = content
     if (paths[params].scripts) {
         paths[params].scripts()
@@ -94,8 +93,6 @@ switch (url) {
     default: alertFunc()
         break;
 }
-
-
 
 
 
