@@ -36,14 +36,14 @@ const contentBox = document.querySelector('#main-page')
 const updateState = async (params) => {
     const paths = {
         'activity': {
-            'html': './home.html',
+            'html': './pages/home.html',
         },
         'map': {
-            'html': './map.html',
+            'html': './pages/map.html',
             'scripts': showWeather
         },
         'timer': {
-            'html': './timer.html',
+            'html': './pages/timer.html',
             'scripts': searchTimer
 
         },
