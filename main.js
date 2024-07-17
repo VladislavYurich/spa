@@ -1,5 +1,3 @@
-
-
 const bntShow = document.querySelector(".profile");
 const profile = document.querySelector(".content_dop--wrapper");
 const body = document.querySelector('body')
@@ -63,30 +61,33 @@ const url = window.location.pathname
 switch (url) {
     case '/spa-webbee/':
         updateState('activity')
+        navActive('activity')
         break;
     case '/spa-webbee/activity':
         updateState('activity')
+        navActive('activity')
         break;
     case '/spa-webbee/map':
         updateState('map')
+        navActive('map')
         break;
     case '/spa-webbee/timer':
         updateState('timer')
+        navActive('timer')
         break;
     default: alertFunc()
         break;
 }
 
-// console.log(url)
-// if (url == '/spa-webbee/') {
-//     updateState('activity')
-// } else if (url == '/spa-webbee/map') {
-//     updateState('map')
-// } else if (url == '/spa-webbee/timer') {
-//     updateState('timer')
-// } else {
+const navActive = (params) => {
+    console.log(document.querySelector(`.${params}`))
+    const currentBtn = document.querySelector('a[href=`${params}`]')
+    console.log(currentBtn)
+    navBtns.forEach(btn => btn.classList.remove('active'))
+    currentBtn.forEach(btn => btn.classList.add('active'))
 
-// }
+}
+
 
 const alertFunc = () => {
     const alertShow = alert('Такой страницы не существует. Вернуть на главную?')
@@ -94,8 +95,6 @@ const alertFunc = () => {
         updateState('activity')
     }
 }
-
-
 
 
 nav.forEach((btn)=>{
