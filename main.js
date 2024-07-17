@@ -58,11 +58,18 @@ const updateState = async (params) => {
 }
 
 const navActive = (params) => {
-    console.log(document.querySelector(`.${params}`))
-    const currentBtn = document.querySelector('a[href=`${params}`]')
+    const currentBtn = document.querySelector(`a[href=${params}]`)
     console.log(currentBtn)
     navBtns.forEach(btn => btn.classList.remove('active'))
-    currentBtn.forEach(btn => btn.classList.add('active'))
+    currentBtn.classList.add('active')
+}
+
+
+const alertFunc = () => {
+    const alertShow = alert('Такой страницы не существует. Вернуть на главную?')
+    if (alertShow) {
+        updateState('activity')
+    }
 }
 
 
@@ -89,19 +96,13 @@ switch (url) {
 }
 
 
-const alertFunc = () => {
-    const alertShow = alert('Такой страницы не существует. Вернуть на главную?')
-    if (alertShow) {
-        updateState('activity')
-    }
-}
+
 
 
 nav.forEach((btn)=>{
     btn.addEventListener('click', (e)=>{
         e.preventDefault()
         const state = {page: e.target.getAttribute('href')}
-        console.log(state.page)
         history.pushState(state, null, state.page)
         updateState(state.page)
     })
