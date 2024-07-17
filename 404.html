@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=072ef320-b6f8-4ba7-863e-dc9e7f6b7105&lang=ru_RU" type="text/javascript"></script>
+
+
+</head>
+<body>
+    <button class="profile profile_tablet">Show Profile</button>
+    <div class="content_dop--wrapper hidden">
+        <div class="main_content-dop  main_content--right">
+            <div class="user_info">
+                <img class="user_photo" src="./img/Photo-User.png" alt="User photo">
+                <div class="user_name">
+                    <p>Hanna Dorman</p>
+                    <span>UX/UI designer</span>
+                </div>
+                <div class="user_socials">
+                    <a href="#">
+                        <img src="./img/telegram.svg" alt="telegram">
+                    </a>
+                    <a href="#">
+                        <img src="./img/hh.svg" alt="hh">
+                    </a>
+                    <a href="#">
+                        <img src="./img/twitter.svg" alt="twitter">
+                    </a>
+                </div>
+            </div>
+            <div class="navigation">
+                <div class="navigation_row">
+                    <p>Navigation</p>
+                    <img src="./img/Chevron.svg" alt="Chevron Up">
+                </div>
+                <div class="navigation_menu">
+                    <div class="menu_row">
+                        <div class="menu_row--right">
+                            <img src="./img/Person.svg" alt="Person">
+                            <a href="#">My profile</a>
+                        </div>
+                    </div>
+                    <div class="menu_row">
+                        <div class="menu_row--right">
+                            <img src="./img/Finance.svg" alt="Balance">
+                            <a href="#">Balance</a>
+                        </div>
+                        <span class="cash">$ 1,430</span>
+                    </div>
+                    <div class="menu_row">
+                        <div class="menu_row--right">
+                            <img src="./img/Scheme.svg" alt="Scheme">
+                            <a href="#">Connections</a>
+                        </div>
+                        <span class="bg bg_red">29</span>
+                    </div>
+                    <div class="menu_row">
+                        <div class="menu_row--right">
+                            <img src="./img/People.svg" alt="Friends">
+                            <a href="#">Friends</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation_bottom">
+                    <div class="bottom_row">
+                        <div class="menu_row--right">
+                            <img src="./img/Calendar.svg" alt="Events">
+                            <a href="#">Events</a>
+                        </div>
+                        <span class="bg bg_green">45</span>
+                    </div>
+                    <div class="bottom_row">
+                        <div class="menu_row--right">
+                            <img src="./img/Settings.svg" alt="Settings">
+                            <a href="#">Account settings</a>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="thoughts">
+                <div class="thoughts_row ">
+                    <p>Share your thoughts</p>
+                    <img src="./img/Chevron.svg" alt="Chevron Up">
+                </div>
+                <div class="thoughts_form">
+                    <form class="form">
+                        <textarea placeholder="Enter your message..." name="text"></textarea>
+                        <button type="submit">Save</button>
+                    </form>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="blur hidden"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__top--left">
+                    <a href="./">
+                        <img src="./img/arrow-right.svg" alt="Arrow-right">
+                    </a>
+                    <p>User pages - <span>Profile</span></p>
+                </div>
+                <div class="header__top--right">
+                    <a class="header__top--item" href="#">
+                        <img src="./img/Chart.svg" alt="Statistics">
+                        Statistics
+                    </a>
+                    <a class="header__top--item" href="#">
+                        <img src="./img/Calculate.svg" alt="Invoices">
+                        Invoices
+                    </a>
+                    <a class="header__top--item" href="#">
+                        <img src="./img/Receipt.svg" alt="Schedule">
+                        Schedule
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__wrapper">
+                <div class="nav__wrapper--nav">
+                    <a class="active nav__btn nav__btn-activity" href="activity">
+                        <img src="./img/Menu.svg" alt="Activity">
+                        Activity
+                    </a>
+                    <a class="nav__btn" href="map"> 
+                        <img src="./img/Location.svg" alt="Map">
+                        Map
+                    </a>
+                    <a  class="nav__btn" href="timer">
+                        <img src="./img/Time.svg" alt="Time">
+                        Time
+                    </a>
+                </div>
+    
+                <div class="nav__wrapper--menu">
+                    <a  href="#">
+                        <img src="./img/Docs.svg" alt="Notes">
+                        Notes
+                    </a>
+                    <a href="#"> 
+                        <img src="./img/People.svg" alt="Friends">
+                        Friends
+                    </a>
+                    <a href="#">
+                        <img src="./img/Jpg.svg" alt="Photos">
+                        Photos
+                    </a>
+                    <a class="link--setting" href="#">
+                        <img class="icon_setting" src="./img/Settings.svg" alt="Setting">
+                    </a>
+                    <a class="link--arrow" href="#">
+                        <img class="icon_arrow" src="./img/Small-Arrow.svg" alt="Arrow">
+                    </a>
+                </div>
+
+                    <div class="header_nav--icon">
+                        <button class="nav-icon-btn">
+                            <div class="nav-icon"></div>
+                        </button>
+                    </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-page" class="main"></main>
+
+    <script src="./main.js"></script>
+</body>
+</html>
+
+
