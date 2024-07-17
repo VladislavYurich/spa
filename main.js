@@ -60,14 +60,35 @@ const updateState = async (params) => {
 }
 
 const url = window.location.pathname
-console.log(url)
-if (url == '/spa-webbee/') {
-    updateState('activity')
-} else if (url == '/spa-webbee/map') {
-    updateState('map')
-} else if (url == '/spa-webbee/timer') {
-    updateState('timer')
-} else {
+switch (url) {
+    case '/spa-webbee/':
+        updateState('activity')
+        break;
+    case '/spa-webbee/activity':
+        updateState('activity')
+        break;
+    case '/spa-webbee/map':
+        updateState('map')
+        break;
+    case '/spa-webbee/timer':
+        updateState('timer')
+        break;
+    default: alertFunc()
+        break;
+}
+
+// console.log(url)
+// if (url == '/spa-webbee/') {
+//     updateState('activity')
+// } else if (url == '/spa-webbee/map') {
+//     updateState('map')
+// } else if (url == '/spa-webbee/timer') {
+//     updateState('timer')
+// } else {
+
+// }
+
+const alertFunc = () => {
     const alertShow = alert('Такой страницы не существует. Вернуть на главную?')
     if (alertShow) {
         updateState('activity')
